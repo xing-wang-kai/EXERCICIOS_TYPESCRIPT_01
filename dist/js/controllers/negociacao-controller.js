@@ -1,15 +1,18 @@
 import Negociacao from "../models/negociacao.js";
+import { Negociacoes } from "../models/negociacoes.js";
 const $ = window.document.querySelector.bind(document);
 export class NegociacaoController {
     constructor() {
+        this.negociacoes = new Negociacoes();
         this.inputData = $("#data");
         this.inputQuantidade = $("#quantidade");
         this.inputValor = $("#valor");
     }
     adicionar() {
-        const negociacao = this.criarNegociacao;
-        console.log(negociacao);
-        this.limparFormulario;
+        const negociacao = this.criarNegociacao();
+        this.negociacoes.adicionarNegociacao(negociacao);
+        console.log(this.negociacoes.listar());
+        this.limparFormulario();
     }
     criarNegociacao() {
         const regex = /-/g;

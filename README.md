@@ -26,3 +26,7 @@ const imputDate = $("#data");
 const date = new Date(this.imputDate.value.replace(regex, ',')) //desta forma o valor de 2022-02-12 vira 2022,02,12 e o DATE converte para data.
 
 ```
+Para invocar um array em typscript tipamos a váriavel como : Array<number> ou Array<string> dependendo do tipo ou somente string[] ou number[] etc.
+É possivel proteger Array com a tipagem ReadOnlyArray, Esta tipagem impede que alguém modifique um array invocado em typscript.
+para o method tipo ReadOnlyArray podemos usar ReadOnly string[];
+
