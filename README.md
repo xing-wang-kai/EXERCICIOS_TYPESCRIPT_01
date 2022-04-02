@@ -66,6 +66,10 @@ da class dando as determinadas permisões de acessos a mesma
 - private
 - protected
 
+- abstract 
+
+A class abstract não pode ser instanciada soment herdada.
+
 ------------------------------------------------------------------------------
 
 ### ELEMENTOS DE HTML
@@ -106,4 +110,11 @@ const date = new Date(this.imputDate.value.replace(regex, ',')) //desta forma o 
 Para invocar um array em typscript tipamos a váriavel como : Array<number> ou Array<string> dependendo do tipo ou somente string[] ou number[] etc.
 É possivel proteger Array com a tipagem ReadOnlyArray, Esta tipagem impede que alguém modifique um array invocado em typscript.
 para o method tipo ReadOnlyArray podemos usar ReadOnly string[];
+
+---------------------------------------------------------------------------
+
+### TIPOS GENÉRICOS
+--------------------------------------------------------------------------
+
+É possivel envocar um type genérico com o typo <T> e então passar para os paramentros :T
 
