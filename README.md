@@ -1,19 +1,96 @@
 # EXERCICIOS_TYPESCRIPT_02
-Estudo da linguagem typescript curso alura.
 
-Methods para informar novas tipagem no typescript
+----------------------------------------------------------------------------
 
-basta colocar : e o tipo do valor que podem ser number, string, Date, any etc;
+### Estudo da linguagem typescript curso alura.
 
-quando uma função não retorna nada o tipo é void 
+----------------------------------------------------------------------------
 
-funções podem retornar objetos ou valores em seu return então tipamos com o : valor retornado.
+Quando desejamos declarar a tipagem dos elementos envocados em uma variavel
+colocamos o sinal de " : " depois o type da váriaval que pode ser [ string, number, date, boolean, etc]
 
-importante colocar .js depois do import do arquivo para que o copilador possa entender.
+EX.:
 
-em Objetos podemos colocar o tipo private public para declarar o acesso ao objeto com typescript.
+```javascript
 
-arquivos de retorno de formulários html podem retornar com o formato do tipo HTMLFormElement.
+const nome: string = 'Jose Maria';
+const idade: number = 30;
+const nascimento: Date = new Date('1980, 12, 07');
+const empregado: boolean = true;
+
+
+```
+
+----------------------------------------------------------------------------
+
+### RETORNO DE FUNÇÕES
+
+----------------------------------------------------------------------------
+
+Funções em typescript devem ter um retorno que depende do valor que retorna ex.
+
+```javascript
+
+class Pessoa{
+    public nome: string;
+    public idade: number;
+    publica nascimento: Date;
+    public empregado: boolean;
+    constructor( nome: string, idade: number, nacimento: string, empregado: boolean){
+        this.nome = nome;
+        this.idade = idade;
+        this.nascimento = new Date( nacimento );
+        this.empregado = empregago 
+    }
+
+    fazerAniversário(): number {
+        return this.idade ++;
+    }
+    falar(): void {
+        console.log('Bom dia!!')
+    }
+}
+
+```
+
+----------------------------------------------------------------------------
+
+### TIPAGENS PARA CLASS
+
+----------------------------------------------------------------------------
+
+Assim como existe em outras linguagens de programações, podemos modificar a abstração de um atributo 
+da class dando as determinadas permisões de acessos a mesma
+
+- public
+- private
+- protected
+
+------------------------------------------------------------------------------
+
+### ELEMENTOS DE HTML
+
+------------------------------------------------------------------------------
+
+Existe algumas tipagems especificas para Elementos de Html como ex.
+
+```javascript
+const $ = window.document.querySelector.bind(document);
+
+const form: Element = $(".form") as Element;
+const elemento: HTMLElement = $("#Elemento") as HTMLElement;
+const inputData: HTMLFormElement = $("#data") as HTMLFormElement;
+const inputQuantidade: HTMLFormElement = $("#quantidade")as HTMLFormElement;
+const inputValor: HTMLFormElement = $("#valor")as HTMLFormElement;
+
+```
+
+-------------------------------------------------------------------------------
+
+### PARA CONVERTER DATAS EM typescript
+
+-------------------------------------------------------------------------------
+
 
 para converter datas usamos a tecnicas com REGEX (Regular expression)
 
